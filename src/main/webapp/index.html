@@ -1,170 +1,184 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kendra Corretora de Seguros | Seguro Auto, Residencial, Saúde e Vida</title>
     <meta name="description" content="Corretora de Seguros com os melhores preços e planos personalizados">
+    <meta name="keywords" content="seguro auto, seguro saúde, corretora de seguros, seguro residencial">
+
     <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&family=Inter&family=Montserrat&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <header>
-        <div class="container">
-            <div id="logo">
-                <img src="./img/logo.png" alt="Logo da Kendra Seguros">
-            </div>
-            <nav>
-                <button class="btnAbre">&#9776;</button>
-                <ul id="menuprincipal">
-                    <li><a href="" id="cadastromobile">Cadastro</a></li>
 
-                    <li id="home">Home</li>
-                    <li><a href="#" class="seguros">Seguros <label for="">&#11167;</label></a>
-                        <ul class="submenu submenuSeguros">
-                            <li><a href="#">Saúde</a></li>
-                            <li><a href="#">Vida</a></li>
-                            <li><a href="#">Auto</a></li>
-                            <li><a href="#">Odontológico</a></li>
-                            <li><a href="#">Residencial</a></li>
-                            <li><a href="#">Empresarial</a></li>
-                            <li><a href="#">Consórcio</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#" class="sobre">Sobre <label for="">&#11167;</label></a>
-                        <ul class="submenu submenuSobre">
-                            <li><a href="#">Sobre a Kendra</a></li>
-                            <li><a href="#">Política de Privacidade</a></li>
-                            <li><a href="#">Política de Cookies</a></li>
-                            <li><a href="#">Termos de Uso</a></li>
-                            <li><a href="#">Aviso Legal</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </nav>
-            <div id="cadastro">
-                <a href="" class="btn">Cadastro</a>
-            </div>
+<header>
+    <div class="container">
+        <div id="logo">
+            <img src="./img/logo.png" alt="Logo da Kendra Seguros">
         </div>
-    </header>
-    <main>
-        <div id="carouselExampleCaptions" class="carousel slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="..." class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>First slide label</h5>
-                        <p>Some representative placeholder content for the first slide.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Second slide label</h5>
-                        <p>Some representative placeholder content for the second slide.</p>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <img src="..." class="d-block w-100" alt="...">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5>Third slide label</h5>
-                        <p>Some representative placeholder content for the third slide.</p>
-                    </div>
+
+        <nav>
+            <button class="btnAbre">&#9776;</button>
+
+            <ul id="menuprincipal">
+                <li><a href="cadastro.html" id="cadastromobile">Cadastro</a></li>
+
+                <li id="home"><a href="#">Home</a></li>
+
+                <li>
+                    <a href="#">Seguros ▼</a>
+                    <ul class="submenu">
+                        <li><a href="#">Saúde</a></li>
+                        <li><a href="#">Vida</a></li>
+                        <li><a href="#">Auto</a></li>
+                        <li><a href="#">Odontológico</a></li>
+                        <li><a href="#">Residencial</a></li>
+                        <li><a href="#">Empresarial</a></li>
+                        <li><a href="#">Consórcio</a></li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#">Sobre ▼</a>
+                    <ul class="submenu">
+                        <li><a href="#">Sobre a Kendra</a></li>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Uso</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+
+        <div id="cadastro">
+            <a href="cadastro.html" class="btn">Cadastro</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- CARROSSEL -->
+    <div id="carouselExampleCaptions" class="carousel slide">
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./img/banner1.jpg" class="d-block w-100" alt="Seguro Auto">
+                <div class="carousel-caption">
+                    <h5>Proteja seu veículo</h5>
+                    <p>Seguro auto completo com excelente custo-benefício.</p>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
-        </div>
-    </main>
-    <section id="porque">
-        <div class="container">
-            <div class="textosection">
-                <h2>Por que fazer seu seguro?</h2>
-                <p>Ter um seguro é uma forma de proteger o seu patrimônio e garantir mais tranquilidade no dia a dia.
-                    Ele ajuda a evitar grandes prejuízos em situações inesperadas e oferce mais segurança para você e
-                    sua família.</p>
+
+            <div class="carousel-item">
+                <img src="./img/banner2.jpg" class="d-block w-100" alt="Seguro Saúde">
+                <div class="carousel-caption">
+                    <h5>Cuide da sua saúde</h5>
+                    <p>Planos acessíveis para você e sua família.</p>
+                </div>
             </div>
-            <div class="imagemsection">
-                <img src="./img/imagemporque.png" alt="">
+
+            <div class="carousel-item">
+                <img src="./img/banner3.jpg" class="d-block w-100" alt="Seguro Residencial">
+                <div class="carousel-caption">
+                    <h5>Segurança para seu lar</h5>
+                    <p>Proteja sua casa contra imprevistos.</p>
+                </div>
             </div>
         </div>
-    </section>
-    <section id="nosso">
-        <div class="container">
-            <h2></h2>
-            <div class="textosection">
-                <h3></h3>
-                <p></p>
-            </div>
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</main>
+
+<!-- POR QUE -->
+<section id="porque">
+    <div class="container">
+        <div class="textosection">
+            <h2>Por que fazer seu seguro?</h2>
+            <p>Ter um seguro é uma forma de proteger seu patrimônio e garantir tranquilidade. Evite prejuízos e tenha segurança para você e sua família.</p>
         </div>
-    </section>
-    <section id="cartao">
-        <div class="container">
-            <div class="card">
-                <img src="" alt="">
-                <h2></h2>
-                <p></p>
-                <a href="" class="btn">Saiba Mais &#8599;</a>
-            </div>
-            <div class="card">
-                <img src="" alt="">
-                <h2></h2>
-                <p></p>
-                <a href="" class="btn">Saiba Mais &#8599;</a>
-            </div>
-            <div class="card">
-                <img src="" alt="">
-                <h2></h2>
-                <p></p>
-                <a href="" class="btn">Saiba Mais &#8599;</a>
-            </div>
+
+        <div class="imagemsection">
+            <img src="./img/imagemporque.png" alt="Família protegida">
         </div>
-    </section>
-    <section id="tatiana">
-        <div class="container">
-            <div class="textosection">
-                <h2></h2>
-                <p></p>
-            </div>
-            <div id="textofoto">
-                <p></p>
-                <img src="" alt="Foto Tatiana">
-            </div>
+    </div>
+</section>
+
+<!-- DIFERENCIAIS -->
+<section id="nosso">
+    <div class="container">
+        <h2>Nossos Diferenciais</h2>
+
+        <div class="textosection">
+            <h3>Atendimento Personalizado</h3>
+            <p>Analisamos seu perfil e indicamos o melhor seguro para suas necessidades.</p>
         </div>
-    </section>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="menu.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
-        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
-        crossorigin="anonymous"></script>
+    </div>
+</section>
+
+<!-- CARDS -->
+<section id="cartao">
+    <div class="container">
+
+        <div class="card">
+            <img src="./img/auto.png" alt="Seguro Auto">
+            <h2>Seguro Auto</h2>
+            <p>Proteção completa para seu veículo.</p>
+            <a href="#" class="btn">Saiba Mais</a>
+        </div>
+
+        <div class="card">
+            <img src="./img/saude.png" alt="Seguro Saúde">
+            <h2>Seguro Saúde</h2>
+            <p>Planos ideais para sua saúde e bem-estar.</p>
+            <a href="#" class="btn">Saiba Mais</a>
+        </div>
+
+        <div class="card">
+            <img src="./img/residencial.png" alt="Seguro Residencial">
+            <h2>Seguro Residencial</h2>
+            <p>Segurança para sua casa e família.</p>
+            <a href="#" class="btn">Saiba Mais</a>
+        </div>
+
+    </div>
+</section>
+
+<!-- SOBRE -->
+<section id="tatiana">
+    <div class="container">
+
+        <div class="textosection">
+            <h2>Sobre a Kendra</h2>
+            <p>Especialistas em seguros, oferecendo soluções sob medida.</p>
+        </div>
+
+        <div id="textofoto">
+            <p>Sou Tatiana, especialista em seguros. Meu objetivo é ajudar você a proteger o que mais importa com segurança e tranquilidade.</p>
+            <img src="./img/tatiana.jpg" alt="Tatiana - Consultora">
+        </div>
+
+    </div>
+</section>
+
+<!-- SCRIPTS -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="menu.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
+
 </body>
-
 </html>
