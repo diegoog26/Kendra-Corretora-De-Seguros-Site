@@ -1,0 +1,365 @@
+/*Cores*/
+:root {
+    --Azulheader: #1977B2;
+    --BrancoPuro: #fff;
+    --Brancoescuro: #E8E8E8;
+    --Preto: #000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    margin: 0 auto;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+.btn {
+    text-decoration: none;
+    font-size: 0.9rem;
+    background-color: var(--BrancoPuro);
+    color: var(--Azulheader);
+    width: 120px;
+    height: 45px;
+    align-items: center;
+    display: flex;
+    border-radius: 7px;
+    justify-content: center;
+}
+
+/*Celular Começo*/
+
+/**Header*/
+
+
+
+header {
+    height: 70px;
+    background-color: var(--BrancoPuro);
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 490;
+    font-style: normal;
+    position: relative;
+}
+
+#logo {
+    padding: 0px 15px;
+}
+
+#logo img {
+    height: 79px;
+    width: 79px;
+}
+
+#cadastro {
+    display: none;
+    pointer-events: none;
+}
+
+nav {
+    margin-bottom: 20px;
+    position: relative;
+    width: 48px;
+    height: 48px;
+}
+
+
+
+#home {
+    display: none;
+}
+
+
+
+#aberto {
+    opacity: 0;
+}
+
+
+.btnAbre {
+    height: 48px;
+    width: 48px;
+    font-size: 2.3rem;
+    background: none;
+    border: none;
+    color: var(--Azulheader);
+}
+
+label {
+    font-size: 0.7rem;
+    color: var(--Azulheader);
+}
+
+
+
+header .container {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    padding: 0px 5px;
+}
+
+
+
+nav #menuprincipal {
+    position: fixed;
+    height: 88vh;
+    background-color: var(--BrancoPuro);
+    right: -100%;
+    width: 100%;
+    top: 70px;
+    position: fixed;
+    transition: all 0.5s;
+    overflow-y: auto;
+}
+
+nav ul li {
+    list-style: none;
+    padding: 9px;
+    text-align: left;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--Azulheader);
+}
+
+.submenu {
+    margin-left: 25px;
+    line-height: 13px;
+    font-size: 0.8rem;
+    display: none;
+}
+
+.submenu li {
+    border-bottom: 3px solid #EDEDED;
+}
+
+#menuprincipal>li {
+    border-bottom: 2px solid var(--Azulheader);
+    padding: 10px 35px;
+    font-size: 1.1rem;
+}
+
+.submenuSeguros.mostra {
+    display: block;
+}
+
+.submenuSobre.mostra {
+    display: block;
+}
+
+#menuprincipal.mostra {
+    right: 0;
+}
+
+/*Fim Header*/
+
+/*Main*/
+
+#cadastro {
+    margin-bottom: 5px;
+}
+
+#cadastro .btn {
+    background-color: var(--Azulheader);
+    color: var(--BrancoPuro);
+}
+
+/**Fim Main*/
+
+/**Section 1*/
+
+#porque {
+    background-color: var(--Azulheader);
+    height: 78vh;
+}
+
+#porque .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#porque .textosection {
+    max-width: 270px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    color: var(--BrancoPuro);
+    margin-left: 20px;
+}
+
+.textosection h2 {
+    margin-bottom: 10px;
+}
+
+.imagemsection {
+    width: auto;
+    height: auto;
+}
+
+.imagemsection img {
+    width: 250px;
+    height: 223px;
+}
+
+/**Section 2 e 3**/
+
+#nosso {
+    height: 20vh;
+}
+
+
+
+/*Celular deitado*/
+@media (min-width: 576px) {
+
+    nav #menuprincipal {
+        height: 80vh;
+    }
+}
+
+
+/*Computador */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+        justify-content: space-between;
+    }
+
+    header {
+        height: 80px;
+    }
+
+    header .container {
+        position: static;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .btnAbre {
+        display: none;
+    }
+
+    #cadastro {
+        display: block;
+        pointer-events: all;
+        margin-bottom: 10px;
+    }
+
+    nav {
+        width: auto;
+        height: auto;
+        margin-top: 30px;
+        align-items: center;
+    }
+
+    #logo {
+        margin-top: 10px;
+    }
+
+    #cadastromobile {
+        display: none;
+    }
+
+    #home {
+        display: block;
+        color: var(--Azulheader);
+        margin-top: 3px;
+    }
+
+    #logo img {
+        height: 100px;
+        width: 100px;
+    }
+
+    nav #menuprincipal {
+        position: static;
+        height: auto;
+        width: auto;
+        right: auto;
+        top: auto;
+        background: none;
+        overflow: visible;
+        margin-right: 20px;
+        padding: 0px;
+    }
+
+    nav ul {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+    }
+
+    #menuprincipal>li {
+        border: none;
+        padding: 0;
+        font-size: 1.2rem;
+    }
+
+    nav ul li {
+        padding: 0;
+    }
+
+    .submenu {
+        position: absolute;
+        top: 192%;
+        display: none;
+        background: var(--BrancoPuro);
+        min-width: 100px;
+        z-index: 1000;
+        line-height: 50px;
+        font-size: 1.0rem;
+        width: 310px;
+        height: 270px;
+        left: 10px;
+    }
+
+    .submenu li a {
+        padding-left: 20px;
+    }
+
+
+
+    .submenuSeguros {
+        height: 372px;
+    }
+
+    #porque{
+        height: 40vh;
+    }
+
+    #porque .container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+        height: 40vh;
+    }
+
+    #porque .textosection {
+        max-width: 270px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        color: var(--BrancoPuro);
+        margin-left: 20px;
+    }
+
+    .imagemsection img {
+    width: auto;
+    height: auto;
+}
+
+}
