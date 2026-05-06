@@ -4,6 +4,7 @@
     --BrancoPuro: #fff;
     --Brancoescuro: #E8E8E8;
     --Preto: #000;
+    --Cinza: #B8B8B8;
 }
 
 * {
@@ -17,10 +18,17 @@
     margin: 0 auto;
 }
 
-html {
+html,
+body {
+    overflow-x: hidden;
     scroll-behavior: smooth;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
 
 .btn {
@@ -28,7 +36,7 @@ html {
     font-size: 0.9rem;
     background-color: var(--BrancoPuro);
     color: var(--Azulheader);
-    width: 120px;
+    width: 110px;
     height: 45px;
     align-items: center;
     display: flex;
@@ -50,6 +58,7 @@ header {
     font-weight: 490;
     font-style: normal;
     position: relative;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
 }
 
 #logo {
@@ -57,8 +66,8 @@ header {
 }
 
 #logo img {
-    height: 79px;
-    width: 79px;
+    height: 75px;
+    width: 75px;
 }
 
 #cadastro {
@@ -167,6 +176,54 @@ nav ul li a {
 
 /*Main*/
 
+
+main {
+    height: 50vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-bottom: 2px solid var(--BrancoPuro);
+    animation: bgCarousel 15s infinite;
+}
+
+main .container {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 15px;
+    height: 50vh;
+}
+
+.textomain {
+    color: var(--Brancoescuro);
+    max-width: 270px;
+    margin: 30px 0px;
+    margin-top: 45px;
+}
+
+.textomain h1 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+
+@keyframes bgCarousel {
+    0% {
+        background-image: url("./img/fundo1.png");
+    }
+
+    33% {
+        background-image: url("./img/fundo2.png");
+    }
+
+    66% {
+        background-image: url("./img/fundo3.png");
+    }
+
+    100% {
+        background-image: url("./img/fundo1.png");
+    }
+}
+
 #cadastro {
     margin-bottom: 5px;
 }
@@ -181,8 +238,8 @@ nav ul li a {
 /**Section 1*/
 
 #porque {
-    background-color: var(--Azulheader);
-    height: 78vh;
+    background-color: #0c66ba;
+    height: 70vh;
 }
 
 #porque .container {
@@ -197,11 +254,17 @@ nav ul li a {
     margin-bottom: 20px;
     margin-top: 20px;
     color: var(--BrancoPuro);
-    margin-left: 20px;
+    text-align: center;
 }
 
 .textosection h2 {
     margin-bottom: 10px;
+    font-size: 1.6rem;
+}
+
+.textosection p {
+    text-align: center;
+    margin-top: 5px;
 }
 
 .imagemsection {
@@ -217,10 +280,146 @@ nav ul li a {
 /**Section 2 e 3**/
 
 #nosso {
-    height: 20vh;
+    height: auto;
 }
 
+#nosso .container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
 
+#nosso .container h2 {
+    margin-top: 20px;
+}
+
+#nosso .container .textosection {
+    max-width: 350px;
+    margin-top: 15px;
+    border-bottom: 2px solid var(--Azulheader);
+    padding-bottom: 15px
+}
+
+#cartao .container {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin: 10px 0px;
+    border-radius: 25px;
+    overflow: hidden;
+    padding: 15px 0px;
+}
+
+.card img {
+    border-radius: 25px;
+}
+
+.card .btn {
+    background-color: var(--Azulheader);
+    color: var(--BrancoPuro);
+}
+
+.card h2 {
+    padding: 10px 0px;
+}
+
+.card p {
+    padding-bottom: 20px;
+    max-width: 200px;
+}
+
+#tatiana {
+    background-color: var(--Azulheader);
+    height: 80vh;
+}
+
+#tatiana .container {
+    flex-direction: column;
+    align-items: center;
+}
+
+#tatiana .container .textosection h2 {
+    margin: 30px 0px 20px 0px;
+}
+
+#tatiana .container .textosection p {
+    display: none;
+}
+
+#tatiana .container #textofoto {
+    text-align: center;
+}
+
+#tatiana .container #textofoto p {
+    margin-bottom: 20px;
+}
+
+#reviews .container {
+    align-items: center;
+    justify-content: center;
+}
+
+.review {
+    margin-top: 50px;
+}
+
+#parcerias .container{
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+.carrossel{
+    margin: 40px auto;
+    width: 90%;
+    border: 2px solid var(--Azulheader);
+    display: flex;
+    overflow-x: hidden;
+    gap: 1em;
+}
+
+.carrossel::-webkit-scrollbar{
+    display: none;
+}
+
+.parceiros{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3em;
+    animation: spin 30s infinite linear;
+    flex-shrink: 0;
+}
+
+@keyframes spin {
+    from {
+        translate: 0;
+    }
+    to {
+        translate: -100%;
+    }
+}
+
+footer{
+    background-color: var(--Azulheader);
+    height: 70vh;
+}
+
+footer .container{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 25px;
+}
 
 /*Celular deitado*/
 @media (min-width: 576px) {
@@ -239,7 +438,7 @@ nav ul li a {
     }
 
     header {
-        height: 80px;
+        height: 70px;
     }
 
     header .container {
@@ -256,18 +455,19 @@ nav ul li a {
     #cadastro {
         display: block;
         pointer-events: all;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
+
     }
 
     nav {
         width: auto;
         height: auto;
-        margin-top: 30px;
-        align-items: center;
+        margin: 0px 20px;
+        margin-bottom: 10px;
     }
 
     #logo {
-        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     #cadastromobile {
@@ -281,8 +481,8 @@ nav ul li a {
     }
 
     #logo img {
-        height: 100px;
-        width: 100px;
+        height: 80px;
+        width: 80px;
     }
 
     nav #menuprincipal {
@@ -293,8 +493,7 @@ nav ul li a {
         top: auto;
         background: none;
         overflow: visible;
-        margin-right: 20px;
-        padding: 0px;
+
     }
 
     nav ul {
@@ -306,7 +505,7 @@ nav ul li a {
     #menuprincipal>li {
         border: none;
         padding: 0;
-        font-size: 1.2rem;
+        font-size: 1.0rem;
     }
 
     nav ul li {
@@ -337,8 +536,16 @@ nav ul li a {
         height: 372px;
     }
 
-    #porque{
-        height: 40vh;
+    main {
+        height: 65vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+
+    #porque {
+        height: 65vh;
     }
 
     #porque .container {
@@ -346,20 +553,99 @@ nav ul li a {
         flex-direction: row;
         align-items: center;
         justify-content: space-around;
-        height: 40vh;
+        height: 65vh;
     }
 
     #porque .textosection {
-        max-width: 270px;
-        margin-bottom: 20px;
-        margin-top: 20px;
+        max-width: 550px;
         color: var(--BrancoPuro);
         margin-left: 20px;
+        text-align: left;
+    }
+
+
+    #porque .textosection h2 {
+        font-size: 2.9rem;
+        margin-bottom: 20px;
+        ;
+    }
+
+    #porque .textosection p {
+        text-align: left;
+        font-size: 1.8rem;
+        max-width: 550px;
+        margin-top: 50px;
+        margin-bottom: 120px;
     }
 
     .imagemsection img {
-    width: auto;
-    height: auto;
-}
+        width: 435px;
+        height: 385px;
+    }
 
+    main .container .textomain h1 {
+        font-size: 1.9rem;
+    }
+
+    main .container .btn {
+        margin-bottom: 85px;
+        width: 200px;
+        height: 50px;
+        font-size: 1.1rem;
+    }
+
+    #nosso .container {
+        flex-direction: row;
+        justify-content: space-around;
+        border-bottom: 1px solid var(--Azulheader);
+        margin-top: 10px;
+    }
+
+    #nosso .container h2 {
+        font-size: 2.1rem;
+        margin-bottom: 60px;
+    }
+
+    #nosso .container h3 {
+        text-align: left;
+    }
+
+    #nosso .container .textosection {
+        border: 0px solid;
+    }
+
+    #nosso .container p {
+        text-align: left;
+    }
+
+    #cartao .container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .review {
+        margin-top: 25px;
+    }
+
+    .card {
+        align-items: first baseline;
+    }
+
+    .card .btn {
+        background-color: var(--Azulheader);
+        color: var(--BrancoPuro);
+        width: 150px;
+    }
+
+    .card h2 {
+        padding: 10px 0px;
+        text-align: left;
+    }
+
+    .card p {
+        padding-bottom: 20px;
+        max-width: 200px;
+        text-align: left;
+        max-width: 350px;
+    }
 }
