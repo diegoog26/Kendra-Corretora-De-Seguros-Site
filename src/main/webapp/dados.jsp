@@ -24,30 +24,25 @@ ArrayList<JavaBeans> lista = (ArrayList<JavaBeans>) request.getAttribute("lista"
 <title>Dados dos clientes</title>
 
 <link rel="stylesheet" href="style.css">
-<link
-	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
-	rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <body>
 
-	<!-- HEADER BRANCO -->
-	<header class="bg-white shadow-sm p-3 mb-3">
-		<div
-			class="container d-flex justify-content-between align-items-center">
+	<header class="bg-white shadow-sm py-3 mb-4 border-bottom">
+		<div class="container d-flex justify-content-between align-items-center">
 			<h4 class="m-0 text-dark">Lista de Clientes</h4>
-			<a href="central.jsp" class="btn btn-primary btn-sm">Voltar</a>
+			<a href="central.jsp" class="btn btn-outline-primary">Voltar</a>
 		</div>
 	</header>
 
-	<div class="container">
+	<div class="container-fluid px-4">
 
 		<div class="table-responsive">
 
-			<table
-				class="table table-bordered table-hover text-center align-middle">
+			<table class="table table-bordered table-hover table-striped align-middle text-center">
 
-				<thead class="table-primary text-dark">
+				<thead class="table-light">
 					<tr>
 						<th>Id</th>
 						<th>Nome</th>
@@ -62,7 +57,7 @@ ArrayList<JavaBeans> lista = (ArrayList<JavaBeans>) request.getAttribute("lista"
 						<th>Seguros</th>
 						<th>Indicou</th>
 						<th>Observação</th>
-						<th>Documento</th>
+						<th>Documento PDF</th>
 						<th>Ações</th>
 					</tr>
 				</thead>
@@ -86,36 +81,53 @@ ArrayList<JavaBeans> lista = (ArrayList<JavaBeans>) request.getAttribute("lista"
 						<td><%=lista.get(i).getSexo()%></td>
 						<td><%=lista.get(i).getEstado()%></td>
 
-						<td><span class="badge bg-primary"> <%=lista.get(i).getSeguros()%>
-						</span></td>
+						<td>
+							<span class="badge bg-primary">
+								<%=lista.get(i).getSeguros()%>
+							</span>
+						</td>
 
 						<td><%=lista.get(i).getIndicou()%></td>
 
-						<td
-							style="max-width: 180px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;">
+						<td style="max-width: 250px; word-wrap: break-word; white-space: normal;">
 							<%=lista.get(i).getObservacao()%>
 						</td>
 
 						<td>
 							<%
 							if (lista.get(i).getDocumento() != null) {
-							%> <a href="view?id=<%=lista.get(i).getId()%>" target="_blank"
-							class="btn btn-success btn-sm"> Abrir </a> <%
- } else {
- out.print("-");
- }
- %>
+							%>
+							<div class="d-flex justify-content-center">
+								<a href="view?id=<%=lista.get(i).getId()%>" target="_blank"
+									class="btn btn-outline-success">
+									Abrir
+								</a>
+							</div>
+							<%
+							} else {
+								out.print("<span class='text-muted'>-</span>");
+							}
+							%>
 						</td>
 
-						<td><a href="select?id=<%=lista.get(i).getId()%>"
-							class="btn btn-sm btn-primary">Editar</a> <a
-							href="delete?id=<%=lista.get(i).getId()%>"
-							class="btn btn-sm btn-danger"
-							onclick="return confirm('Tem certeza?')">Excluir</a></td>
+						<td>
+							<div class="d-flex justify-content-center gap-2">
+								<a href="select?id=<%=lista.get(i).getId()%>"
+									class="btn btn-outline-primary">
+									Editar
+								</a>
+
+								<a href="delete?id=<%=lista.get(i).getId()%>"
+									class="btn btn-outline-danger"
+									onclick="return confirm('Tem certeza?')">
+									Excluir
+								</a>
+							</div>
+						</td>
 					</tr>
 
 					<%
-					}
+						}
 					}
 					%>
 
