@@ -11,7 +11,7 @@ public class DAO {
 	private String driver = "com.mysql.cj.jdbc.Driver";
 	private String url = "jdbc:mysql://127.0.0.1:3306/kendrabanco?useTimezone=true&serverTimezone=UTC";
 	private String user = "root";
-	private String password = "123@senac";
+	private String password = "";
 
 	private Connection conectar() {
 		Connection con = null;
@@ -46,7 +46,13 @@ public class DAO {
 			pst.setString(1, contato.getNome());
 			pst.setString(2, contato.getCpf());
 			pst.setString(3, contato.getEmpresa());
-			pst.setString(4, contato.getCnpj());
+			String cnpj = contato.getCnpj();
+
+			if (cnpj == null || cnpj.trim().isEmpty()) {
+			    pst.setNull(4, java.sql.Types.VARCHAR);
+			} else {
+			    pst.setString(4, cnpj);
+			}
 			pst.setString(5, contato.getTelefone());
 			pst.setString(6, contato.getEmail());
 			pst.setString(7, contato.getNascimento());

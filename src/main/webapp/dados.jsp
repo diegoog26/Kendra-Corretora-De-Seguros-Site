@@ -25,6 +25,7 @@ ArrayList<JavaBeans> lista = (ArrayList<JavaBeans>) request.getAttribute("lista"
 
 <link rel="stylesheet" href="style.css">
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
 </head>
 
 <body>
@@ -111,17 +112,19 @@ ArrayList<JavaBeans> lista = (ArrayList<JavaBeans>) request.getAttribute("lista"
 						</td>
 
 						<td>
-							<div class="d-flex justify-content-center gap-2">
+							<div class="d-flex flex-column align-items-center gap-1">
+
 								<a href="select?id=<%=lista.get(i).getId()%>"
-									class="btn btn-outline-primary">
-									Editar
+									class="btn btn-outline-primary btn-sm d-flex justify-content-center align-items-center" style="width: 44px; height: 34px;">
+									<i class="bi bi-pencil"></i>
 								</a>
 
 								<a href="delete?id=<%=lista.get(i).getId()%>"
-									class="btn btn-outline-danger"
-									onclick="return confirm('Tem certeza?')">
-									Excluir
+									class="btn btn-outline-danger btn-sm d-flex justify-content-center align-items-center"
+									onclick="return confirm('Tem certeza?')" style="width: 44px; height: 34px;">
+									<i class="bi bi-trash"></i>
 								</a>
+
 							</div>
 						</td>
 					</tr>
